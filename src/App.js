@@ -1,23 +1,45 @@
-import logo from './logo.svg';
+
+
+import React, {useState, useEffect} from 'react';
+import QuestionContainer from './components/QuestionContainer';
+import CreateQuestion from './components/CreateQuestion';
 import './App.css';
 
 function App() {
+  
+  const [data, setData]=useState([])
+
+  let request= async()=>{
+  let req = await fetch('https://opentdb.com/api.php?amount=10')
+  let res = await req.json()
+   // console.log(res.results)
+    setData(res.results)
+  }
+  
+  useEffect(() => {
+    request()
+  }, [])
+
+//  data.map((e)=>{
+//   console.log(e.category) 
+
+//  })
+
+ 
+
+
+ 
+  
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <QuestionContainer questions={data} />
+     <CreateQuestion />
+     
+     
+      
     </div>
   );
 }
