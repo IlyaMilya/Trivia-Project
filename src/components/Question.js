@@ -1,21 +1,14 @@
 import React from "react";
 import MultipleChoice from "./MultipleChoice";
 
-function Question(){
+function Question({question}){
+ let allAnswers = question.incorrect_answers.concat(question.correct_answer)
 
 return(
    <div>
-   <div className='question'>
-        {}
-        </div>
-        
-    <div className="choicebox">
-
-        <MultipleChoice />
-        
+    <h1> {question.question} </h1> 
+        <MultipleChoice answers={allAnswers} correct={question.correct_answer} />  
     </div>
-    </div>
-    
 )
 
 }
