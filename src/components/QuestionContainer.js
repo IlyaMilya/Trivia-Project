@@ -7,12 +7,13 @@ function QuestionContainer({questions, points, setPoints}){
     
 return(
     <div>
-    <h1>Trivia</h1> 
     {
         questions.map((element) => {
             return <Question question={element} points={points} setPoints={setPoints} /> 
         })
+     
     }    
+    
     </div>   
 )
 }

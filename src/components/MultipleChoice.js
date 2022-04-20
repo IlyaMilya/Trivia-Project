@@ -2,7 +2,8 @@ import React, {useState, useEffect} from "react";
 import Points from "./Points"
 
 function MultipleChoice({answers, correct, points, setPoints}){
-  const [rightPoint] = useState(10)
+  const [totalPoints, setTotalPoints] = useState(0)
+  const [correctA] = useState(correct)
 
   
   //shuffle array function  
@@ -25,15 +26,16 @@ function MultipleChoice({answers, correct, points, setPoints}){
       return newArr
     }
 
-    
 let allAnswer = shuffle(answers)
+
 
     //check answer function
     function checkAnswer(e){
         let answer =  e.target.innerHTML
-        if (answer == correct){
-            setPoints(points+10)
-            document.getElementById(e.target.innerHTML).style.color = 'red'
+        if (answer == correctA){
+           
+            document.getElementById(e.target.innerHTML).style.background = 'gold'
+            document.getElementById(e.target.innerHTML).style.color = 'purple'
             //alert('you are right!')
         }else{
          // setPoints(points-2)
@@ -44,12 +46,11 @@ let allAnswer = shuffle(answers)
     
     return (
        <div>
-        {
-            
+        {  
             allAnswer.map((e)=> {
-                return <button id={e} class="btn" style={{ background: 'lightgreen' }} onClick={(el) => checkAnswer(el)}>{e}</button>
-            }) 
-        }
+                return <button id={e} className="btn" style={{ background: 'lightgreen' }} onClick={(el) => checkAnswer(el)}>{e}</button>
+            })      
+        }   
      </div>
       
       

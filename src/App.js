@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react';
 import QuestionContainer from './components/QuestionContainer';
 import CreateQuestion from './components/CreateQuestion';
 import Points from './components/Points';
+import Nav from './components/Nav';
 
 import './App.css';
 
@@ -18,7 +19,6 @@ function App() {
   let request= async()=>{
   let req = await fetch('https://opentdb.com/api.php?amount=10')
   let res = await req.json()
-   // console.log(res.results)
     setData(res.results)
   }
   
@@ -26,15 +26,9 @@ function App() {
     request()
   }, [])
 
-//  data.map((e)=>{
-//   console.log(e.category) 
-
-//  })
-
-
   return (
     <div className="App">
-     <Points points={points}/>
+     <Nav/>
      <QuestionContainer questions={data} points={points} setPoints={setPoints} />
      <CreateQuestion />
    
