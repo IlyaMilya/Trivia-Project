@@ -4,7 +4,7 @@ function Points({points}) {
     
 
     return(
-        <h1> {points} </h1>
+        <h1> {points} points</h1>
     );
 }
 

@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+/* added styling */
+body {
+  font-family: 'GUMDROP';
+  background-image: url('https://graphicdesignjunction.com/wp-content/uploads/2014/05/001+background+pattern+designs.jpg');
+}
