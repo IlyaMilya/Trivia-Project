@@ -3,6 +3,7 @@ import Points from "./Points"
 
 function MultipleChoice({answers, correct, points, setPoints}){
   const [rightPoint] = useState(10)
+
   
   //shuffle array function  
   function shuffle(arr) {
@@ -24,12 +25,8 @@ function MultipleChoice({answers, correct, points, setPoints}){
       return newArr
     }
 
-    const allAnswer = []
-useEffect(()=> {
-   allAnswer = shuffle(answers)
-},[])
     
-
+let allAnswer = shuffle(answers)
 
     //check answer function
     function checkAnswer(e){
