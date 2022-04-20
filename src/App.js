@@ -1,5 +1,4 @@
 
-
 import React, {useState, useEffect} from 'react';
 import QuestionContainer from './components/QuestionContainer';
 import CreateQuestion from './components/CreateQuestion';
@@ -14,12 +13,7 @@ function App() {
   // creating point system
   const [points, setPoints] = useState(0)
 
-  function test(){
-    console.log("test passed")
-  }
-
-
-
+  
 
   let request= async()=>{
   let req = await fetch('https://opentdb.com/api.php?amount=10')
@@ -37,22 +31,13 @@ function App() {
 
 //  })
 
- 
-
-
- 
-  
-
-
 
   return (
     <div className="App">
      <Points points={points}/>
      <QuestionContainer questions={data} points={points} setPoints={setPoints} />
      <CreateQuestion />
-     
-     
-      
+   
     </div>
   );
 }
