@@ -1,0 +1,40 @@
+
+
+ [
+    {
+    "category": "Entertainment: Cartoon & Animations",
+    "type": "multiple",
+    "difficulty": "easy",
+    "question": "The song &#039;Little April Shower&#039; features in which Disney cartoon film?",
+    "correct_answer": "Bambi",
+    "incorrect_answers": [
+    "Cinderella",
+    "Pinocchio",
+    "The Jungle Book"
+    ]
+    },
+    {
+    "category": "Geography",
+    "type": "multiple",
+    "difficulty": "hard",
+    "question": "Which of these is NOT a city in India?",
+    "correct_answer": "Islamabad",
+    "incorrect_answers": [
+    "Hyderabad",
+    "Ahmedabad",
+    "Ghaziabad"
+    ]
+    },
+    {
+    "category": "Entertainment: Japanese Anime & Manga",
+    "type": "multiple",
+    "difficulty": "medium",
+    "question": "When was the first episode of Soul Eater released?",
+    "correct_answer": "2008",
+    "incorrect_answers": [
+    "2003",
+    "2005",
+    "2011"
+    ]
+    }
+]
