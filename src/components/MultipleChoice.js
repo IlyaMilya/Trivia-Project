@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import Points from "./Points"
 
 function MultipleChoice({answers, correct, points, setPoints}){
@@ -24,7 +24,11 @@ function MultipleChoice({answers, correct, points, setPoints}){
       return newArr
     }
 
-    const allAnswer = shuffle(answers)
+    const allAnswer = []
+useEffect(()=> {
+   allAnswer = shuffle(answers)
+},[])
+    
 
 
     //check answer function
@@ -35,7 +39,7 @@ function MultipleChoice({answers, correct, points, setPoints}){
             document.getElementById(e.target.innerHTML).style.color = 'red'
             //alert('you are right!')
         }else{
-          setPoints(points-2)
+         // setPoints(points-2)
            document.getElementById(e.target.innerHTML).style.opacity = .2;
            
         }
