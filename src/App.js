@@ -4,6 +4,11 @@ import QuestionContainer from './components/QuestionContainer';
 import CreateQuestion from './components/CreateQuestion';
 import Points from './components/Points';
 import Nav from './components/Nav';
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import About from './components/About';
+import StartPage from './components/StartPage';
+
+
 
 import './App.css';
 
@@ -29,8 +34,29 @@ function App() {
   return (
     <div className="App">
      <Nav/>
-     <QuestionContainer questions={data} points={points} setPoints={setPoints} />
-     <CreateQuestion />
+     
+     
+    
+    <Switch>
+        <Route exact path="/"> 
+         <StartPage />
+       </Route>
+        <Route exact path="/trivia"> 
+          <QuestionContainer questions={data} />
+       </Route>
+       <Route exact path="/about"> 
+          <About />
+     </Route>
+     <Route exact path="/create"> 
+          <CreateQuestion />
+     </Route>
+    </Switch>
+
+
+
+
+     {/* <QuestionContainer questions={data} points={points} setPoints={setPoints} /> */}
+     {/* <CreateQuestion /> */}
    
     </div>
   );
