@@ -5,10 +5,10 @@ function Nav() {
     
 
     return(
-        <div>
+        <div >
         <img src="https://superfree.com/wp-content/uploads/2020/12/TRV_Logo.png"  width="140" height="140"/>
          
-         <div>
+         <div className='nav-line'>
           <NavLink className="nav" to="/"> 
             Homepage
           </NavLink>
