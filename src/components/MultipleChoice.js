@@ -48,7 +48,7 @@ let allAnswer = shuffle(answers)
        <div>
         {  
             allAnswer.map((e)=> {
-                return <button id={e} className="btn" style={{ background: 'lightgreen' }} onClick={(el) => checkAnswer(el)}>{e}</button>
+                return <button id={e} className="btn"  onClick={(el) => checkAnswer(el)}>{e}</button>
             })      
         }   
      </div>

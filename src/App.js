@@ -48,7 +48,7 @@ function App() {
           <About />
      </Route>
      <Route exact path="/create"> 
-          <CreateQuestion />
+          <CreateQuestion setData= {setData} />
      </Route>
     </Switch>
 

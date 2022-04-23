@@ -36,9 +36,7 @@ background-image: ('triviabackground.jpeg');
   background-color: green;
 }
 
-.form{
-  background-color: beige;
-}
+
 
 @keyframes App-logo-spin {
   from {
@@ -55,6 +53,21 @@ body {
   background-image: url('https://graphicdesignjunction.com/wp-content/uploads/2014/05/001+background+pattern+designs.jpg');
 }
 
+
+
+hr {
+  display:none;
+}
+
+.question{
+  display:block;
+  margin: auto;
+  padding: 50px;
+}
+
+.home-image{
+border-radius: 30px;
+}
 
 
 h3 {
@@ -75,9 +88,114 @@ h3 {
 
 }
 
+
+
 .nav {
+ 
+  display: block;
+  text-decoration: none ;
   margin-right: 20px;
-  font-size: 30px;
-  color: darkgreen;
+  font-size: 40px;
+  background-image: bisque;
+  color: white;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+ 
+}
+
+.nav :hover {
+  padding-top: 12px;
+  padding-bottom: 3px; 
+  }
+
+  .nav-line {
+
+    background-image: url('https://cdn.britannica.com/95/77395-050-3BFC69CB/Alaska-Range-Wonder-Lake-Denali-National-Park.jpg');
+    border: solid purple 12px;
+    border-radius: 100px;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+  background-position: center;  
+  }
+
+  .btn  {
+    background-color: purple; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+    font-style: bold;
+}
+
+.btn:hover {
+  background-color: purple; /* Green */
+  color: purple;
+ padding: 20px;
+}
+
+.form-header{
+  font-size:50px;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA8sXqxsa1ozUaShwZ9NlQp_AvFw4LX8MYsQ&usqp=CAU');
+  background-attachment: fixed;
+  background-repeat: none;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.form{
+  padding-left: 20;
+  float: left;
+}
+
+
+.user{
+  font-size: 67px;
+  margin: auto;
+  padding: 5px;
+  
+}
+
+/* .submit-button{
+  size:60x;
+  position:bottom;
+  color: purple;
+  background-color: beige;
+  border-radius: 30px;
+  border: solid salmon;
+  font: bold ;
+  border: 1px;
+} */
+
+.submit-button {
+font-size: 30px;
+color: green;
+background-color: beige;
+border-radius: 10px;
+border: 1;
+
+}
+
+#correct{
+  position: center ;
+  ;
+}
+#incorrect{
+  font-size: 67px;
+  padding: 5px;
+}
+
+
+
+.submit-button:hover{
+  background-color:red;
+  color: green;
+  padding: 40px;
+
+  
+
 }
