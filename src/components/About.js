@@ -5,7 +5,7 @@ function About() {
     return(
       <div>
           <h3>Think and have fun with the best trivia game. Test your knowledge and challenge your friends!</h3>
-          <p className="about"> wildly popular live game show app where you can win real cash prizes for free.
+          <p className="about"> Wildly popular live game show app where you can win real cash prizes for free.
 
 
 Every day, tune into HQ to answer trivia questions and solve word puzzles ranging from easy to hard to savage. See if you have what it takes to win cash.

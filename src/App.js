@@ -25,12 +25,14 @@ function App() {
   let req = await fetch('https://opentdb.com/api.php?amount=10')
   let res = await req.json()
     setData(res.results)
+    
   }
   
   useEffect(() => {
     request()
   }, [])
 
+  console.log(data)
   return (
     <div className="App">
      <Nav/>

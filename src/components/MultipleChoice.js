@@ -3,7 +3,9 @@ import Points from "./Points"
 
 function MultipleChoice({answers, correct, points, setPoints}){
   const [totalPoints, setTotalPoints] = useState(0)
-  const [correctA] = useState(correct)
+  
+ 
+  const correctChoice = correct
 
   
   //shuffle array function  
@@ -28,27 +30,40 @@ function MultipleChoice({answers, correct, points, setPoints}){
 
 let allAnswer = shuffle(answers)
 
+ console.log(allAnswer, "please give me an array")
+
+ function parsed(e){
+   for (var i = 0; i < allAnswer.length; i++) {
+  (e[i].replaceAll("&#039;", "'").replaceAll("&quot;", '"').replaceAll("&eacute;", "é").replaceAll("&amp;", "&"))
+   }
+ }
+
+ parsed(allAnswer)
+   
+
+
 
     //check answer function
-    function checkAnswer(e){
-        let answer =  e.target.innerHTML
-        if (answer == correctA){
+    function checkAnswer(choice){
+        // e.replaceAll("&#039;", "'").replaceAll("&quot;", '"').replaceAll("&eacute;", "é")
+        let answer =  choice.target.innerHTML
+        if (answer == correctChoice){
            
-            document.getElementById(e.target.innerHTML).style.background = 'gold'
-            document.getElementById(e.target.innerHTML).style.color = 'purple'
-            //alert('you are right!')
+            document.getElementById(choice.target.innerHTML).style.background = 'gold'
+            document.getElementById(choice.target.innerHTML).style.color = 'purple'
+            alert('you are right!')
         }else{
          // setPoints(points-2)
-           document.getElementById(e.target.innerHTML).style.opacity = .2;
+           document.getElementById(choice.target.innerHTML).style.opacity = .2;
            
         }
     }
     
     return (
        <div>
-        {  
-            allAnswer.map((e)=> {
-                return <button id={e} className="btn"  onClick={(el) => checkAnswer(el)}>{e}</button>
+        {    allAnswer.map((e)=> {
+          // e.replaceAll("&#039;", "'").replaceAll("&quot;", '"')
+        return <button id={e} className="btn"  onClick={(el) => checkAnswer(el)}>{e.replaceAll("&#039;", "'").replaceAll("&quot;", '"').replaceAll("&eacute;", "é").replaceAll("&amp;", "&")}</button>
             })      
         }   
      </div>
