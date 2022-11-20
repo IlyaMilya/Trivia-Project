@@ -112,11 +112,15 @@ h3 {
 
     background-image: url('https://cdn.britannica.com/95/77395-050-3BFC69CB/Alaska-Range-Wonder-Lake-Denali-National-Park.jpg');
     border: solid purple 12px;
-    border-radius: 100px;
+    border-radius: 210px;
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment: fixed;
-  background-position: center;  
+  background-position: center; 
+  margin-right:400px;
+  margin-left: 400px;
+  padding-left: 40px;
+  
   }
 
   .btn  {

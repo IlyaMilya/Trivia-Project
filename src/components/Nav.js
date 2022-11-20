@@ -6,7 +6,7 @@ function Nav() {
 
     return(
         <div >
-        <img src="https://superfree.com/wp-content/uploads/2020/12/TRV_Logo.png"  width="140" height="140"/>
+        <img src="https://superfree.com/wp-content/uploads/2020/12/TRV_Logo.png"  width="200" height="140"/>
          
          <div className='nav-line'>
           <NavLink className="nav" to="/"> 
