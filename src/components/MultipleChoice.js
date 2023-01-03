@@ -51,6 +51,7 @@ let allAnswer = shuffle(answers)
            
             document.getElementById(choice.target.innerHTML).style.background = 'gold'
             document.getElementById(choice.target.innerHTML).style.color = 'purple'
+
             alert('you are right!')
         }else{
          // setPoints(points-2)
@@ -62,8 +63,8 @@ let allAnswer = shuffle(answers)
     return (
        <div>
         {    allAnswer.map((e)=> {
-          // e.replaceAll("&#039;", "'").replaceAll("&quot;", '"')
-        return <button id={e} className="btn"  onClick={(el) => checkAnswer(el)}>{e.replaceAll("&#039;", "'").replaceAll("&quot;", '"').replaceAll("&eacute;", "é").replaceAll("&amp;", "&")}</button>
+          
+        return <button id={e.replaceAll("&#039;", "'").replaceAll("&quot;", '"').replaceAll("&eacute;", "é").replaceAll("&amp;", "&")} className="btn"  onClick={(el) => checkAnswer(el)}>{e.replaceAll("&#039;", "'").replaceAll("&quot;", '"').replaceAll("&eacute;", "é").replaceAll("&amp;", "&")}</button>
             })      
         }   
      </div>

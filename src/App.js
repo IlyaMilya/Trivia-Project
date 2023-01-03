@@ -22,7 +22,7 @@ function App() {
   
 
   let request= async()=>{
-  let req = await fetch('https://opentdb.com/api.php?amount=5')
+  let req = await fetch('https://opentdb.com/api.php?amount=7')
   let res = await req.json()
     setData(res.results)
     console.log(data)

@@ -8,22 +8,24 @@ function CreateQuestion({setData}){
     const [correct, setCorrect]=useState([])
     
 
-const handleSubmit = async (e)=> {
-  e.preventDefault()
-  let req = await fetch('http://localhost:8001/results',{
-    method: 'POST',
-    headers: {"Content-Type": "application/json"},
-    body: JSON.stringify(form)
-  })
-  let res = await req.json()
+// const handleSubmit = async (e)=> {
+//   e.preventDefault()
+//   let req = await fetch('http://localhost:8001/results',{
+//     method: 'POST',
+//     headers: {"Content-Type": "application/json"},
+//     body: JSON.stringify(form)
+//   })
+//   let res = await req.json()
   
 
-  setData((prevState) => [...prevState, res])
-  console.log(res)
+//   setData((prevState) => [...prevState, res])
+//   console.log(res)
 
-  console.log('im hairy potter')
-    }
+//   console.log('im hairy potter')
+    
 
+
+    // onSubmit = {(e)=> {handleSubmit(e)}}
     return(
 
         <div>
@@ -33,7 +35,7 @@ const handleSubmit = async (e)=> {
                     </h1>
             
             <div className='form'>
-                <form className="createQuest" onSubmit = {(e)=> {handleSubmit(e)}} >
+                <form className="createQuest" onSubmit={console.log("Question has been added")}>
                 <input className="user" placeholder ="Question" rows={10} value={form.question} onChange={(e)=> setForm({...form, question: e.target.value})}/>
                 <input className= "user" placeholder="Difficulty" value={form.difficulty} onChange={(e)=>setForm({...form, difficulty: e.target.value})}/>
                 <input className="user" id='correct' placeholder="Correct Answer" value={form.correctAnswer} onChange={(e)=> setForm({...form, correctAnswer: e.target.value})}/>
@@ -43,7 +45,7 @@ const handleSubmit = async (e)=> {
                 
                 <div>
                 <div className="submit">
-                <button className="submit-button" type="submit">Add your question</button>
+                <button className="submit-button" type="submit" >Add your question</button>
                 </div>
                 </div>
                 </form>
